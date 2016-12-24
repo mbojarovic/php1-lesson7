@@ -23,7 +23,6 @@ class News
 
     public function getOneArticles()
     {
-       //$this->id = $id;
         return $this->articles;
     }
 }

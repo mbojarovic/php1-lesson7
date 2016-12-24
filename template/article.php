@@ -56,35 +56,35 @@
 
             foreach ($this->data['articles'][0]->getArticle() as $article): ?>
 
-                <div class="blog-post">
-                    <h2 class="blog-post-title"><a href="/lesson7/article.php?id=<?php echo $article['id'] ?>">
-                            <?php echo $article['news_title']; ?></a></h2>
-                    <p class="blog-post-meta"><?php echo $article['news_date']; ?> by
-                        <a href="#"><?php echo $article['news_author']; ?></a></p>
-                    <p><?php echo mb_substr($article['news_text'], 0 , 300); ?>...</p>
-                </div><!-- /.blog-post -->
+            <div class="blog-post">
+                <h2 class="blog-post-title"><a href="/lesson7/article.php?id=<?php echo $article['id'] ?>">
+                <?php echo $article['news_title']; ?></a></h2>
+                <p class="blog-post-meta"><?php echo $article['news_date']; ?> by
+                <a href="#"><?php echo $article['news_author']; ?></a></p>
+                <p><?php echo mb_substr($article['news_text'], 0 , 300); ?>...</p>
+            </div><!-- /.blog-post -->
 
-            <?php endforeach; ?>
+<?php endforeach; ?>
 
-        </div><!-- /.row -->
+    </div><!-- /.row -->
 
-    </div><!-- /.container -->
+</div><!-- /.container -->
 
-    <footer class="blog-footer">
+<footer class="blog-footer">
 
-        <p>
-            <a href="#">Back to top</a>
-        </p>
-    </footer>
+    <p>
+        <a href="#">Back to top</a>
+    </p>
+</footer>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="/lesson7/template/dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/lesson7/template/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="/lesson7/template/dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/lesson7/template/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>

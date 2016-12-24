@@ -36,7 +36,7 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
-            <a class="blog-nav-item active" href="/lection7/3/news.php">Новости</a>
+            <a class="blog-nav-item active" href="/lesson7/news.php">Новости</a>
         </nav>
     </div>
 </div>
@@ -45,7 +45,7 @@
 
     <div class="blog-header">
         <h1 class="blog-title">Новости</h1>
-        <p class="lead blog-description">Новости всего мира.</p>
+        <p class="lead blog-description">Новости IT всего мира.</p>
     </div>
 
     <div class="row">
@@ -54,21 +54,23 @@
 
             <?php
 
-            foreach ($this->data['articles'][0]->getArticle() as $article): ?>
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+            } else {
+                $id = null;
+            }
+
+            ?>
 
             <div class="blog-post">
-                <h2 class="blog-post-title"><a href="/lesson7/article.php?id=<?php echo $article['id'] ?>">
-                <?php echo $article['news_title']; ?></a></h2>
-                <p class="blog-post-meta"><?php echo $article['news_date']; ?> by
-                <a href="#"><?php echo $article['news_author']; ?></a></p>
-                <p><?php echo mb_substr($article['news_text'], 0 , 300); ?>...</p>
+                <h2 class="blog-post-title">
+                    <?php echo $this->data['article_one'][0]->getArticle()[$id -1]['news_title']; ?></h2>
+                <p><?php echo $this->data['article_one'][0]->getArticle()[$id -1]['news_text']; ?></p>
             </div><!-- /.blog-post -->
 
-<?php endforeach; ?>
+        </div><!-- /.row -->
 
-    </div><!-- /.row -->
-
-</div><!-- /.container -->
+    </div><!-- /.container -->
 
 <footer class="blog-footer">
 

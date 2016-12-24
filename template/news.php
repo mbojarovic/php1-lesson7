@@ -36,7 +36,7 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
-            <a class="blog-nav-item active" href="/lection7/3/news.php">Новости</a>
+            <a class="blog-nav-item active" href="/lesson7/news.php">Новости</a>
         </nav>
     </div>
 </div>
@@ -45,7 +45,7 @@
 
     <div class="blog-header">
         <h1 class="blog-title">Новости</h1>
-        <p class="lead blog-description">Новости всего мира.</p>
+        <p class="lead blog-description">Новости IT всего мира.</p>
     </div>
 
     <div class="row">

@@ -55,7 +55,7 @@
             <?php
 
             if (isset($_GET['id'])) {
-                $id  = (int)$_GET['id'];
+                $id  = (int)$_GET['id'] -1;
             } else {
                 $id = null;
             }
@@ -64,8 +64,8 @@
 
             <div class="blog-post">
                 <h2 class="blog-post-title">
-                    <?php echo $this->data['article_one'][0]->getArticle()[$id -1]['news_title']; ?></h2>
-                <p><?php echo $this->data['article_one'][0]->getArticle()[$id -1]['news_text']; ?></p>
+                    <?php echo $this->data['article_one'][0]->getArticle()[$id]['news_title']; ?></h2>
+                <p><?php echo $this->data['article_one'][0]->getArticle()[$id]['news_text']; ?></p>
             </div><!-- /.blog-post -->
 
         </div><!-- /.row -->

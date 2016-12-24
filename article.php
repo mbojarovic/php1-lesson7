@@ -9,10 +9,3 @@ $view_one = new View();
 $view_one->set('article_one', $news_one->getOneArticle());
 
 $view_one->display(__DIR__ . '/template/article.php');
-
-
-if (isset($_GET['id'])) {
-   return $id = (int)$_GET['id'];
-} else {
-   return $id = null;
-}

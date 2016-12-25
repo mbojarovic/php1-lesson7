@@ -54,14 +54,14 @@
 
             <?php
 
-            foreach ($this->data['articles'][0]->getArticle() as $article): ?>
+             foreach ($this->data['articles'] as $article): ?>
 
                 <div class="blog-post">
-                    <h2 class="blog-post-title"><a href="/lesson7/article.php?id=<?php echo $article['id'] ?>">
-                            <?php echo $article['news_title']; ?></a></h2>
-                    <p class="blog-post-meta"><?php echo $article['news_date']; ?> by
-                        <a href="#"><?php echo $article['news_author']; ?></a></p>
-                    <p><?php echo mb_substr($article['news_text'], 0 , 300); ?>...</p>
+                    <h2 class="blog-post-title"><a href="/lesson7/article.php?id=<?php echo $article->getArticle()['id'] ?>">
+                            <?php echo $article->getArticle()['news_title']; ?></a></h2>
+                    <p class="blog-post-meta"><?php echo $article->getArticle()['news_date']; ?> by
+                        <a href="#"><?php echo $article->getArticle()['news_author']; ?></a></p>
+                    <p><?php echo mb_substr($article->getArticle()['news_text'], 0 , 300); ?>...</p>
                 </div><!-- /.blog-post -->
 
             <?php endforeach; ?>

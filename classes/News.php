@@ -21,8 +21,8 @@ class News
         return $this->articles;
     }
 
-    public function getOneArticle()
+    public function getOneArticle($id)
     {
-        return $this->articles;
+        return $this->articles[$id];
     }
 }

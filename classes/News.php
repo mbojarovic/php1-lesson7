@@ -21,8 +21,13 @@ class News
         return $this->articles;
     }
 
-    public function getOneArticle($id)
+    public function getOneArticle(int $id)
     {
         return $this->articles[$id];
+    }
+
+    public function countId($coundId)
+    {
+        return $coundId = count(include $this->path);
     }
 }
